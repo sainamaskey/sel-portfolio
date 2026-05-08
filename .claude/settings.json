@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//usr/bin/**)",
+      "Bash(command -v nvm)",
+      "Bash(which curl *)",
+      "Read(//home/saina/**)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} · %{size_download} bytes\\\\n\" http://localhost:8000/index.html)"
+    ]
+  }
+}
