@@ -1,1212 +1,2134 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#07070d" />
-    <title>Selene Mulmi — UI/UX Designer</title>
-    <meta
-      name="description"
-      content="Portfolio of Selene Mulmi — UI/UX Designer & CSIT student bridging aesthetics and functional code."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "system-ui", "sans-serif"],
-              display: ["Space Grotesk", "Inter", "sans-serif"],
-              mono: ["JetBrains Mono", "monospace"],
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#faf8f3" />
+  <title>Selene Mulmi — UI/UX Designer</title>
+  <meta name="description"
+    content="Portfolio of Selene Mulmi — UI/UX Designer crafting interfaces with care for craft and clarity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            display: ["Space Grotesk", "Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+          },
+          colors: {
+            cream: {
+              50: "#fdfcf8",
+              100: "#faf8f3",
+              200: "#f3efe6",
             },
-            colors: {
-              ink: {
-                950: "#07070d",
-                900: "#0b0b14",
-                800: "#11111c",
-                700: "#1a1a28",
-                600: "#262638",
-                500: "#3a3a52",
-                400: "#6b6b85",
-                300: "#9a9aae",
-                200: "#cdcdd6",
-                100: "#ededf2",
-              },
-              brand: {
-                indigo: "#6366f1",
-                violet: "#a855f7",
-                fuchsia: "#d946ef",
-                cyan: "#22d3ee",
-              },
+            ink: {
+              950: "#0a0a0f",
+              900: "#14141d",
+              800: "#1f1f2b",
+              700: "#2c2c3a",
+              600: "#404052",
+              500: "#5a5a70",
+              400: "#7a7a8e",
+              300: "#9c9cae",
+              200: "#c8c8d2",
+              100: "#e6e6ec",
+            },
+            brand: {
+              indigo: "#4f46e5",
+              violet: "#9333ea",
+              fuchsia: "#c026d3",
+              pink: "#ec4899",
+              rose: "#f43f5e",
+              cyan: "#0891b2",
+              peach: "#fb923c",
             },
           },
         },
-      };
-    </script>
-    <style>
-      :root {
-        --accent-1: #818cf8;
-        --accent-2: #c084fc;
-        --accent-3: #22d3ee;
-      }
-      * {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Inter", system-ui, sans-serif;
-        background-color: #07070d;
-        color: #ededf2;
-        overflow-x: hidden;
-      }
-      /* Animated background orbs */
-      .bg-orb {
-        position: absolute;
-        border-radius: 9999px;
-        filter: blur(120px);
-        opacity: 0.45;
-        pointer-events: none;
-        z-index: 0;
-      }
-      /* Subtle grid texture */
-      .grid-bg {
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-        background-size: 56px 56px;
-        mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
-        -webkit-mask-image: radial-gradient(
-          ellipse at top,
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --bg: #faf8f3;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background-color: #faf8f3;
+      color: #0a0a0f;
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    /* ---------- Background ---------- */
+    .bg-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(140px);
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(15, 15, 30, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 15, 30, 0.045) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at top,
           black 30%,
-          transparent 75%
-        );
+          transparent 75%);
+    }
+
+    /* ---------- Glass cards ---------- */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      border: 1px solid rgba(15, 15, 30, 0.06);
+      box-shadow: 0 4px 28px rgba(15, 15, 30, 0.04);
+    }
+
+    .glass-strong {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border: 1px solid rgba(15, 15, 30, 0.07);
+      box-shadow: 0 14px 50px rgba(15, 15, 30, 0.07);
+    }
+
+    /* ---------- Animated gradient text ---------- */
+    .gradient-text {
+      background: linear-gradient(120deg,
+          #4f46e5 0%,
+          #9333ea 25%,
+          #c026d3 50%,
+          #ec4899 75%,
+          #f43f5e 100%);
+      background-size: 250% 250%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: gradient-shift 8s ease-in-out infinite;
+    }
+
+    @keyframes gradient-shift {
+
+      0%,
+      100% {
+        background-position: 0% 50%;
       }
-      /* Glassmorphism card */
-      .glass {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.04),
-          rgba(255, 255, 255, 0.015)
-        );
-        backdrop-filter: blur(14px) saturate(140%);
-        -webkit-backdrop-filter: blur(14px) saturate(140%);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+
+      50% {
+        background-position: 100% 50%;
       }
-      .glass-strong {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.07),
-          rgba(255, 255, 255, 0.025)
-        );
-        backdrop-filter: blur(20px) saturate(160%);
-        -webkit-backdrop-filter: blur(20px) saturate(160%);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* ---------- Gradient border ---------- */
+    .gradient-border {
+      position: relative;
+    }
+
+    .gradient-border::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg,
+          rgba(147, 51, 234, 0.55),
+          rgba(236, 72, 153, 0.35),
+          transparent 60%);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* ---------- Bouncy reveal-on-scroll ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px) scale(0.985);
+      transition:
+        opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+        transform 0.9s cubic-bezier(0.34, 1.42, 0.64, 1);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-d1 {
+      transition-delay: 0.08s;
+    }
+
+    .reveal-d2 {
+      transition-delay: 0.18s;
+    }
+
+    .reveal-d3 {
+      transition-delay: 0.28s;
+    }
+
+    .reveal-d4 {
+      transition-delay: 0.4s;
+    }
+
+    /* ---------- Card hover lift ---------- */
+    .card-lift {
+      transition:
+        transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+        box-shadow 0.5s ease,
+        background-color 0.4s ease;
+    }
+
+    .card-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 60px rgba(15, 15, 30, 0.1);
+    }
+
+    /* ---------- Float / drift ---------- */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
       }
-      .gradient-text {
-        background: linear-gradient(
-          120deg,
-          #c4b5fd 0%,
-          #a78bfa 30%,
-          #f0abfc 60%,
-          #67e8f9 100%
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+
+      50% {
+        transform: translateY(-14px);
       }
-      .gradient-border {
-        position: relative;
+    }
+
+    .float-slow {
+      animation: float 9s ease-in-out infinite;
+    }
+
+    @keyframes drift {
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0);
       }
-      .gradient-border::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        padding: 1px;
-        background: linear-gradient(
-          135deg,
-          rgba(129, 140, 248, 0.6),
-          rgba(192, 132, 252, 0.3),
-          transparent 60%
-        );
-        -webkit-mask:
-          linear-gradient(#000 0 0) content-box,
-          linear-gradient(#000 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        pointer-events: none;
+
+      33% {
+        transform: translate(10px, -14px) rotate(8deg);
       }
-      /* Reveal-on-scroll */
+
+      66% {
+        transform: translate(-8px, -6px) rotate(-6deg);
+      }
+    }
+
+    .drift {
+      animation: drift 7s ease-in-out infinite;
+    }
+
+    /* ---------- Spinning star ---------- */
+    @keyframes spin-slow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin-slow {
+      animation: spin-slow 22s linear infinite;
+      display: inline-block;
+      transform-origin: 50% 60%;
+    }
+
+    .spin-slow:hover {
+      animation-duration: 4s;
+    }
+
+    /* ---------- Twinkle ---------- */
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scale(0.8) rotate(0);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.15) rotate(180deg);
+      }
+    }
+
+    .twinkle {
+      animation: twinkle 3.5s ease-in-out infinite;
+    }
+
+    .twinkle-2 {
+      animation: twinkle 5s ease-in-out 0.6s infinite;
+    }
+
+    .twinkle-3 {
+      animation: twinkle 4.2s ease-in-out 1.4s infinite;
+    }
+
+    /* ---------- Wobble ---------- */
+    @keyframes wobble {
+
+      0%,
+      100% {
+        transform: rotate(0);
+      }
+
+      20% {
+        transform: rotate(-10deg);
+      }
+
+      40% {
+        transform: rotate(8deg);
+      }
+
+      60% {
+        transform: rotate(-5deg);
+      }
+
+      80% {
+        transform: rotate(3deg);
+      }
+    }
+
+    .hover-wobble:hover {
+      animation: wobble 0.7s ease-in-out;
+    }
+
+    /* ---------- Caret ---------- */
+    @keyframes blink {
+
+      0%,
+      49% {
+        opacity: 1;
+      }
+
+      50%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .caret {
+      display: inline-block;
+      width: 4px;
+      height: 0.9em;
+      background: linear-gradient(180deg, #9333ea, #ec4899);
+      transform: translateY(2px);
+      margin-left: 6px;
+      animation: blink 1s steps(1) infinite;
+      border-radius: 2px;
+    }
+
+    /* ---------- Project cards (tilt + lift) ---------- */
+    .project-card {
+      transition:
+        transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1),
+        box-shadow 0.5s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px) rotate(-0.6deg);
+      box-shadow: 0 28px 60px rgba(15, 15, 30, 0.18);
+    }
+
+    .project-card .project-overlay {
+      opacity: 0;
+      transform: translateY(8px);
+      transition:
+        opacity 0.4s ease,
+        transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-card .project-art {
+      transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .project-card:hover .project-art {
+      transform: scale(1.06);
+    }
+
+    /* ---------- Tool tile ---------- */
+    .tool-tile {
+      transition: transform 0.35s cubic-bezier(0.34, 1.45, 0.6, 1);
+    }
+
+    .tool-tile:hover {
+      transform: translateY(-4px) scale(1.04);
+    }
+
+    .tool-tile:hover .tool-icon {
+      animation: wobble 0.6s ease-in-out;
+    }
+
+    /* ---------- Marquee ---------- */
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes marquee-rev {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .marquee-track {
+      animation: marquee 28s linear infinite;
+    }
+
+    .marquee-track-rev {
+      animation: marquee-rev 34s linear infinite;
+    }
+
+    /* ---------- Nudge for arrows on CTA hover ---------- */
+    .group:hover .nudge {
+      transform: translate(3px, -3px);
+      transition: transform 0.3s ease;
+    }
+
+    /* ---------- Cursor blob ---------- */
+    .cursor-blob {
+      position: fixed;
+      pointer-events: none;
+      width: 460px;
+      height: 460px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at center,
+          rgba(168, 85, 247, 0.16),
+          rgba(236, 72, 153, 0.08) 40%,
+          transparent 60%);
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      filter: blur(30px);
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .cursor-blob.on {
+      opacity: 1;
+    }
+
+    @media (pointer: coarse) {
+      .cursor-blob {
+        display: none;
+      }
+    }
+
+    /* ---------- Pulse glow ---------- */
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(147, 51, 234, 0);
+      }
+
+      50% {
+        box-shadow: 0 0 36px 0 rgba(147, 51, 234, 0.3);
+      }
+    }
+
+    .pulse-glow {
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    /* ---------- Heart pop ---------- */
+    @keyframes heart-pop {
+
+      0%,
+      100% {
+        transform: scale(1) rotate(-8deg);
+      }
+
+      50% {
+        transform: scale(1.2) rotate(8deg);
+      }
+    }
+
+    .heart-pop {
+      animation: heart-pop 1.8s ease-in-out infinite;
+    }
+
+    /* ---------- Underline draw ---------- */
+    .underline-draw {
+      background-image: linear-gradient(120deg, #9333ea, #ec4899);
+      background-size: 0% 3px;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    a:hover .underline-draw,
+    .group:hover .underline-draw {
+      background-size: 100% 3px;
+    }
+
+    /* ---------- Scrollbar ---------- */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #faf8f3;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(#d4d4d8, #a1a1aa);
+      border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(#9333ea, #ec4899);
+    }
+
+    ::selection {
+      background: rgba(147, 51, 234, 0.22);
+      color: #0a0a0f;
+    }
+
+    [data-lucide] {
+      width: 1em;
+      height: 1em;
+      stroke-width: 1.6;
+    }
+
+    /* ---------- Project art animations ---------- */
+    .art-bob {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: art-bob 5s ease-in-out infinite;
+    }
+
+    @keyframes art-bob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
+    .art-pulse {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: art-pulse 3.5s ease-in-out infinite;
+    }
+
+    @keyframes art-pulse {
+
+      0%,
+      100% {
+        opacity: 0.85;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.07);
+      }
+    }
+
+    .art-tilt {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: art-tilt 7s ease-in-out infinite;
+    }
+
+    @keyframes art-tilt {
+
+      0%,
+      100% {
+        transform: rotate(-12deg);
+      }
+
+      50% {
+        transform: rotate(-3deg);
+      }
+    }
+
+    .art-sway {
+      transform-box: fill-box;
+      transform-origin: top center;
+      animation: art-sway 4.5s ease-in-out infinite;
+    }
+
+    @keyframes art-sway {
+
+      0%,
+      100% {
+        transform: rotate(-3deg);
+      }
+
+      50% {
+        transform: rotate(3deg);
+      }
+    }
+
+    .art-bars rect {
+      transform-box: fill-box;
+      transform-origin: bottom center;
+      animation: art-bar 4s ease-in-out infinite;
+    }
+
+    @keyframes art-bar {
+
+      0%,
+      100% {
+        transform: scaleY(1);
+      }
+
+      50% {
+        transform: scaleY(0.78);
+      }
+    }
+
+    .art-bars rect:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .art-bars rect:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .art-bars rect:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .art-bars rect:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    .art-bars rect:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+
+    /* Shrink project illustrations so they read as accents */
+    .project-art > div > svg,
+    .project-art svg {
+      transform: scale(0.7);
+      transform-origin: center;
+    }
+
+    /* Stickers */
+    .sticker {
+      position: absolute;
+      font-size: 28px;
+      line-height: 1;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
       .reveal {
-        opacity: 0;
-        transform: translateY(28px);
-        transition:
-          opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
-          transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+        opacity: 1 !important;
+        transform: none !important;
       }
-      .reveal.in {
-        opacity: 1;
-        transform: none;
-      }
-      .reveal-d1 {
-        transition-delay: 0.08s;
-      }
-      .reveal-d2 {
-        transition-delay: 0.18s;
-      }
-      .reveal-d3 {
-        transition-delay: 0.28s;
-      }
-      /* Hero name animation */
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-14px);
-        }
-      }
-      .float-slow {
-        animation: float 9s ease-in-out infinite;
-      }
-      @keyframes blink {
-        0%,
-        49% {
-          opacity: 1;
-        }
-        50%,
-        100% {
-          opacity: 0;
-        }
-      }
-      .caret {
-        display: inline-block;
-        width: 3px;
-        height: 0.9em;
-        background: linear-gradient(180deg, #818cf8, #c084fc);
-        transform: translateY(2px);
-        margin-left: 6px;
-        animation: blink 1s steps(1) infinite;
-      }
-      /* Project hover */
-      .project-card .project-overlay {
-        opacity: 0;
-        transition: opacity 0.4s ease;
-      }
-      .project-card:hover .project-overlay {
-        opacity: 1;
-      }
-      .project-card .project-art {
-        transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
-      }
-      .project-card:hover .project-art {
-        transform: scale(1.06);
-      }
-      /* Marquee */
-      @keyframes marquee {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-      .marquee-track {
-        animation: marquee 28s linear infinite;
-      }
-      /* Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #07070d;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: linear-gradient(#3a3a52, #1a1a28);
-        border-radius: 8px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(#6366f1, #a855f7);
-      }
-      /* Selection */
-      ::selection {
-        background: rgba(168, 85, 247, 0.35);
-        color: #fff;
-      }
-      /* Lucide icons sizing reset */
-      [data-lucide] {
-        width: 1em;
-        height: 1em;
-        stroke-width: 1.6;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
+    }
+  </style>
+</head>
 
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<body>
+  <div id="root"></div>
 
-    <script type="text/babel" data-presets="react">
-      const { useEffect, useRef, useState } = React;
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-      // ---------- Icon helper (Lucide via UMD) ----------
-      function Icon({ name, className = "" }) {
-        const ref = useRef(null);
-        useEffect(() => {
-          if (window.lucide && ref.current) {
-            ref.current.innerHTML = "";
-            const el = document.createElement("i");
-            el.setAttribute("data-lucide", name);
-            ref.current.appendChild(el);
-            window.lucide.createIcons({ attrs: {} });
-          }
-        }, [name]);
-        return <span ref={ref} className={"inline-flex items-center justify-center " + className} aria-hidden="true" />;
-      }
+  <script type="text/babel" data-presets="react">
+    const { useEffect, useRef, useState } = React;
 
-      // ---------- Reveal-on-scroll hook ----------
-      function useReveal() {
-        useEffect(() => {
-          const els = document.querySelectorAll(".reveal");
-          const io = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((e) => {
-                if (e.isIntersecting) {
-                  e.target.classList.add("in");
-                  io.unobserve(e.target);
-                }
-              });
-            },
-            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-          );
-          els.forEach((el) => io.observe(el));
-          return () => io.disconnect();
-        }, []);
-      }
+    // ---------- Icon helper (Lucide via UMD) ----------
+    function Icon({ name, className = "" }) {
+      const ref = useRef(null);
+      useEffect(() => {
+        if (window.lucide && ref.current) {
+          ref.current.innerHTML = "";
+          const el = document.createElement("i");
+          el.setAttribute("data-lucide", name);
+          ref.current.appendChild(el);
+          window.lucide.createIcons({ attrs: {} });
+        }
+      }, [name]);
+      return (
+        <span
+          ref={ref}
+          className={"inline-flex items-center justify-center " + className}
+          aria-hidden="true"
+        />
+      );
+    }
 
-      // ---------- Section heading ----------
-      function SectionLabel({ index, children }) {
-        return (
-          <div className="flex items-center gap-3 text-xs font-mono tracking-[0.2em] text-ink-300 uppercase">
-            <span className="text-brand-violet">{index}</span>
-            <span className="h-px w-8 bg-gradient-to-r from-brand-violet/60 to-transparent" />
-            <span>{children}</span>
-          </div>
+    // ---------- Reveal-on-scroll hook ----------
+    function useReveal() {
+      useEffect(() => {
+        const els = document.querySelectorAll(".reveal");
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
         );
-      }
+        els.forEach((el) => io.observe(el));
+        return () => io.disconnect();
+      }, []);
+    }
 
-      // ---------- Background ----------
-      function BackgroundFX() {
-        return (
-          <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-            <div className="absolute inset-0 grid-bg opacity-60" />
-            <div
-              className="bg-orb float-slow"
-              style={{
-                background: "radial-gradient(circle at center, #6366f1, transparent 60%)",
-                width: 600,
-                height: 600,
-                top: "-12%",
-                left: "-10%",
-              }}
-            />
-            <div
-              className="bg-orb float-slow"
-              style={{
-                background: "radial-gradient(circle at center, #a855f7, transparent 60%)",
-                width: 700,
-                height: 700,
-                top: "30%",
-                right: "-15%",
-                animationDelay: "-3s",
-              }}
-            />
-            <div
-              className="bg-orb float-slow"
-              style={{
-                background: "radial-gradient(circle at center, #22d3ee, transparent 60%)",
-                width: 500,
-                height: 500,
-                bottom: "-10%",
-                left: "20%",
-                animationDelay: "-6s",
-                opacity: 0.3,
-              }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "radial-gradient(ellipse at top, transparent 0%, #07070d 75%)",
-              }}
-            />
-          </div>
+    // ---------- Counter ----------
+    function Counter({ target, suffix = "", className = "" }) {
+      const ref = useRef(null);
+      const [val, setVal] = useState(0);
+      const [done, setDone] = useState(false);
+      useEffect(() => {
+        if (!ref.current || done) return;
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                setDone(true);
+                io.disconnect();
+                const start = performance.now();
+                const dur = 1500;
+                const t = parseInt(target, 10) || 0;
+                const tick = (now) => {
+                  const p = Math.min(1, (now - start) / dur);
+                  const eased = 1 - Math.pow(1 - p, 3);
+                  setVal(Math.round(eased * t));
+                  if (p < 1) requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+              }
+            });
+          },
+          { threshold: 0.4 }
         );
-      }
+        io.observe(ref.current);
+        return () => io.disconnect();
+      }, [target, done]);
+      return (
+        <span ref={ref} className={className}>
+          {val}
+          {suffix}
+        </span>
+      );
+    }
 
-      // ---------- Nav ----------
-      function Nav() {
-        const [scrolled, setScrolled] = useState(false);
-        const [open, setOpen] = useState(false);
-        useEffect(() => {
-          const onScroll = () => setScrolled(window.scrollY > 12);
-          onScroll();
-          window.addEventListener("scroll", onScroll);
-          return () => window.removeEventListener("scroll", onScroll);
-        }, []);
-        const links = [
-          ["About", "#about"],
-          ["Work", "#work"],
-          ["Skills", "#skills"],
-          ["Projects", "#projects"],
-          ["Contact", "#contact"],
-        ];
-        return (
-          <header
-            className={
-              "fixed top-0 left-0 right-0 z-50 transition-all duration-500 " +
-              (scrolled ? "py-3" : "py-5")
-            }
+    // ---------- Sparkle SVG ----------
+    function Sparkle({ size = 24, className = "", style = {}, hue = "violet" }) {
+      const colors =
+        hue === "pink"
+          ? ["#ec4899", "#f43f5e"]
+          : hue === "indigo"
+            ? ["#4f46e5", "#9333ea"]
+            : hue === "peach"
+              ? ["#fb923c", "#ec4899"]
+              : ["#9333ea", "#ec4899"];
+      const id = "sg-" + Math.random().toString(36).slice(2, 8);
+      return (
+        <span
+          className={"absolute pointer-events-none " + className}
+          style={style}
+          aria-hidden="true"
+        >
+          <svg
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div className="mx-auto max-w-6xl px-5">
-              <nav
-                className={
-                  "flex items-center justify-between rounded-full px-4 sm:px-6 py-2.5 transition-all duration-500 " +
-                  (scrolled ? "glass-strong shadow-2xl shadow-black/40" : "glass")
-                }
-              >
-                <a href="#top" className="flex items-center gap-2 group">
-                  <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-brand-indigo to-brand-violet text-sm font-bold text-white shadow-lg shadow-brand-violet/30">
-                    SM
-                  </span>
-                  <span className="hidden sm:inline font-display font-semibold tracking-tight text-ink-100">
-                    Selene<span className="text-brand-violet">.</span>
-                  </span>
-                </a>
-                <ul className="hidden md:flex items-center gap-1 text-sm">
-                  {links.map(([label, href]) => (
-                    <li key={href}>
-                      <a
-                        href={href}
-                        className="px-3 py-1.5 rounded-full text-ink-200 hover:text-white hover:bg-white/5 transition-colors"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="#contact"
-                  className="hidden md:inline-flex items-center gap-1.5 rounded-full bg-white text-ink-950 text-sm font-medium px-4 py-1.5 hover:bg-ink-100 transition-colors"
-                >
-                  Let's talk
-                  <Icon name="arrow-up-right" className="text-base" />
-                </a>
-                <button
-                  className="md:hidden p-2 text-ink-100"
-                  onClick={() => setOpen((o) => !o)}
-                  aria-label="Toggle menu"
-                >
-                  <Icon name={open ? "x" : "menu"} className="text-xl" />
-                </button>
-              </nav>
-              {open && (
-                <div className="md:hidden mt-2 glass rounded-2xl p-3 flex flex-col gap-1">
-                  {links.map(([label, href]) => (
+            <path
+              d="M12 1.5 C 12.7 7.6 14.4 9.3 22.5 12 C 14.4 14.7 12.7 16.4 12 22.5 C 11.3 16.4 9.6 14.7 1.5 12 C 9.6 9.3 11.3 7.6 12 1.5 Z"
+              fill={`url(#${id})`}
+            />
+            <defs>
+              <linearGradient id={id} x1="0" y1="0" x2="24" y2="24">
+                <stop offset="0%" stopColor={colors[0]} />
+                <stop offset="100%" stopColor={colors[1]} />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+      );
+    }
+
+    // ---------- Cursor blob ----------
+    function CursorBlob() {
+      const ref = useRef(null);
+      useEffect(() => {
+        const mq = window.matchMedia("(pointer: coarse)");
+        if (mq.matches) return;
+        const el = ref.current;
+        if (!el) return;
+        let x = window.innerWidth / 2,
+          y = window.innerHeight / 2,
+          tx = x,
+          ty = y;
+        const move = (e) => {
+          tx = e.clientX;
+          ty = e.clientY;
+          el.classList.add("on");
+        };
+        const leave = () => el.classList.remove("on");
+        let raf;
+        const tick = () => {
+          x += (tx - x) * 0.12;
+          y += (ty - y) * 0.12;
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          raf = requestAnimationFrame(tick);
+        };
+        window.addEventListener("mousemove", move);
+        window.addEventListener("mouseleave", leave);
+        raf = requestAnimationFrame(tick);
+        return () => {
+          cancelAnimationFrame(raf);
+          window.removeEventListener("mousemove", move);
+          window.removeEventListener("mouseleave", leave);
+        };
+      }, []);
+      return <div ref={ref} className="cursor-blob" />;
+    }
+
+    // ---------- Section heading ----------
+    function SectionLabel({ index, children }) {
+      return (
+        <div className="flex items-center gap-3 text-xs font-mono tracking-[0.2em] text-ink-500 uppercase">
+          <span className="text-brand-violet">{index}</span>
+          <span className="h-px w-8 bg-gradient-to-r from-brand-violet/60 to-transparent" />
+          <span>{children}</span>
+          <Sparkle
+            size={14}
+            className="twinkle relative"
+            style={{ position: "static", display: "inline-block" }}
+          />
+        </div>
+      );
+    }
+
+    // ---------- Background ----------
+    function BackgroundFX() {
+      return (
+        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 grid-bg opacity-70" />
+          <div
+            className="bg-orb float-slow"
+            style={{
+              background:
+                "radial-gradient(circle at center, #c4b5fd, transparent 60%)",
+              width: 640,
+              height: 640,
+              top: "-12%",
+              left: "-10%",
+            }}
+          />
+          <div
+            className="bg-orb float-slow"
+            style={{
+              background:
+                "radial-gradient(circle at center, #fbcfe8, transparent 60%)",
+              width: 720,
+              height: 720,
+              top: "30%",
+              right: "-15%",
+              animationDelay: "-3s",
+            }}
+          />
+          <div
+            className="bg-orb float-slow"
+            style={{
+              background:
+                "radial-gradient(circle at center, #fde68a, transparent 60%)",
+              width: 540,
+              height: 540,
+              bottom: "-10%",
+              left: "20%",
+              animationDelay: "-6s",
+              opacity: 0.45,
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse at top, transparent 0%, rgba(250, 248, 243, 0.85) 75%)",
+            }}
+          />
+        </div>
+      );
+    }
+
+    // ---------- Nav ----------
+    function Nav() {
+      const [scrolled, setScrolled] = useState(false);
+      const [open, setOpen] = useState(false);
+      useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 12);
+        onScroll();
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+      }, []);
+      const links = [
+        ["About", "#about"],
+        ["Work", "#work"],
+        ["Skills", "#skills"],
+        ["Projects", "#projects"],
+        ["Contact", "#contact"],
+      ];
+      return (
+        <header
+          className={
+            "fixed top-0 left-0 right-0 z-50 transition-all duration-500 " +
+            (scrolled ? "py-3" : "py-5")
+          }
+        >
+          <div className="mx-auto max-w-6xl px-5">
+            <nav
+              className={
+                "flex items-center justify-between rounded-full px-4 sm:px-6 py-2.5 transition-all duration-500 " +
+                (scrolled ? "glass-strong" : "glass")
+              }
+            >
+              <a href="#top" className="flex items-center gap-2 group">
+                <span className="hover-wobble relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-brand-violet to-brand-pink text-sm font-bold text-white shadow-md shadow-brand-violet/25">
+                  SM
+                </span>
+                <span className="hidden sm:inline font-display font-semibold tracking-tight text-ink-950">
+                  Selene<span className="text-brand-violet">.</span>
+                </span>
+              </a>
+              <ul className="hidden md:flex items-center gap-1 text-sm">
+                {links.map(([label, href]) => (
+                  <li key={href}>
                     <a
-                      key={href}
                       href={href}
-                      onClick={() => setOpen(false)}
-                      className="px-4 py-2 rounded-xl text-ink-200 hover:bg-white/5 hover:text-white text-sm"
+                      className="px-3 py-1.5 rounded-full text-ink-700 hover:text-ink-950 hover:bg-ink-950/5 transition-colors"
                     >
                       {label}
                     </a>
-                  ))}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#contact"
+                className="group hidden md:inline-flex items-center gap-1.5 rounded-full bg-ink-950 text-white text-sm font-medium px-4 py-1.5 hover:bg-ink-800 transition-colors"
+              >
+                Let's talk
+                <Icon name="arrow-up-right" className="text-base nudge" />
+              </a>
+              <button
+                className="md:hidden p-2 text-ink-950"
+                onClick={() => setOpen((o) => !o)}
+                aria-label="Toggle menu"
+              >
+                <Icon name={open ? "x" : "menu"} className="text-xl" />
+              </button>
+            </nav>
+            {open && (
+              <div className="md:hidden mt-2 glass rounded-2xl p-3 flex flex-col gap-1">
+                {links.map(([label, href]) => (
+                  <a
+                    key={href}
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className="px-4 py-2 rounded-xl text-ink-700 hover:bg-ink-950/5 hover:text-ink-950 text-sm"
+                  >
+                    {label}
+                  </a>
+                ))}
+                <a
+                  href="#contact"
+                  onClick={() => setOpen(false)}
+                  className="mt-1 px-4 py-2 rounded-xl bg-ink-950 text-white text-sm font-medium text-center"
+                >
+                  Let's talk
+                </a>
+              </div>
+            )}
+          </div>
+        </header>
+      );
+    }
+
+    // ---------- Hero ----------
+    function Hero() {
+      return (
+        <section
+          id="top"
+          className="relative min-h-screen flex items-center pt-32 pb-20"
+        >
+          {/* Floating sparkle decorations */}
+          <Sparkle
+            size={32}
+            hue="violet"
+            className="twinkle"
+            style={{ top: "22%", left: "6%" }}
+          />
+          <Sparkle
+            size={20}
+            hue="pink"
+            className="twinkle-2"
+            style={{ top: "38%", left: "44%" }}
+          />
+          <Sparkle
+            size={26}
+            hue="peach"
+            className="twinkle-3"
+            style={{ top: "70%", left: "10%" }}
+          />
+          <Sparkle
+            size={18}
+            hue="indigo"
+            className="twinkle-2"
+            style={{ top: "18%", right: "6%" }}
+          />
+
+          <div className="mx-auto max-w-6xl px-5 w-full relative z-10">
+            <div className="grid lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-8 reveal">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-mono text-ink-700 mb-6">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  Available for select projects · 2026
+                </div>
+                <h1 className="font-display text-[clamp(3rem,9vw,7.5rem)] leading-[0.95] font-bold tracking-tight">
+                  <span className="block text-ink-950">Selene</span>
+                  <span className="block">
+                    <span className="gradient-text">Mulmi</span>
+                    <span className="caret align-baseline" />
+                  </span>
+                </h1>
+                <p className="mt-6 max-w-2xl text-lg sm:text-xl text-ink-700 leading-relaxed reveal reveal-d1">
+                  UI/UX Designer focused on the craft. I design products that
+                  feel{" "}
+                  <span className="text-ink-950 font-medium">inevitable</span>{" "}
+                  — clear, considered, and quietly confident — built on
+                  research, systems, and a love for the details.
+                </p>
+                <div className="mt-9 flex flex-wrap gap-3 reveal reveal-d2">
+                  <a
+                    href="#projects"
+                    className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-violet to-brand-pink px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-violet/25 hover:shadow-brand-violet/40 transition-all hover:-translate-y-0.5 pulse-glow"
+                  >
+                    View my work
+                    <Icon
+                      name="arrow-down"
+                      className="text-base group-hover:translate-y-0.5 transition-transform"
+                    />
+                  </a>
                   <a
                     href="#contact"
-                    onClick={() => setOpen(false)}
-                    className="mt-1 px-4 py-2 rounded-xl bg-white text-ink-950 text-sm font-medium text-center"
+                    className="group inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-ink-950 hover:bg-white transition-colors"
                   >
-                    Let's talk
+                    <Icon name="mail" className="text-base" />
+                    Get in touch
+                    <Icon name="arrow-right" className="text-base nudge" />
                   </a>
                 </div>
-              )}
-            </div>
-          </header>
-        );
-      }
-
-      // ---------- Hero ----------
-      function Hero() {
-        return (
-          <section
-            id="top"
-            className="relative min-h-screen flex items-center pt-32 pb-20"
-          >
-            <div className="mx-auto max-w-6xl px-5 w-full relative z-10">
-              <div className="grid lg:grid-cols-12 gap-10 items-center">
-                <div className="lg:col-span-8 reveal">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-mono text-ink-200 mb-6">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-                    </span>
-                    Available for select projects · 2026
-                  </div>
-                  <h1 className="font-display text-[clamp(3rem,9vw,7.5rem)] leading-[0.95] font-bold tracking-tight">
-                    <span className="block text-ink-100">Selene</span>
-                    <span className="block">
-                      <span className="gradient-text">Mulmi</span>
-                      <span className="caret align-baseline" />
-                    </span>
-                  </h1>
-                  <p className="mt-6 max-w-2xl text-lg sm:text-xl text-ink-200 leading-relaxed reveal reveal-d1">
-                    UI/UX Designer & CSIT student bridging the gap between{" "}
-                    <span className="text-white font-medium">aesthetics</span>{" "}
-                    and{" "}
-                    <span className="text-white font-medium">functional code</span>.
-                    I design interfaces that feel inevitable — and I can build them too.
-                  </p>
-                  <div className="mt-9 flex flex-wrap gap-3 reveal reveal-d2">
-                    <a
-                      href="#projects"
-                      className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-indigo to-brand-violet px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-violet/25 hover:shadow-brand-violet/40 transition-all hover:-translate-y-0.5"
-                    >
-                      View my work
-                      <Icon name="arrow-down" className="text-base group-hover:translate-y-0.5 transition-transform" />
-                    </a>
-                    <a
-                      href="#contact"
-                      className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-ink-100 hover:bg-white/10 transition-colors"
-                    >
-                      <Icon name="mail" className="text-base" />
-                      Get in touch
-                    </a>
-                  </div>
-                  <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-ink-300 reveal reveal-d3">
-                    <span className="inline-flex items-center gap-2">
-                      <Icon name="map-pin" className="text-brand-violet" />
-                      Kupondole, Lalitpur
-                    </span>
-                    <span className="inline-flex items-center gap-2">
-                      <Icon name="briefcase" className="text-brand-violet" />
-                      UI/UX @ Xuno
-                    </span>
-                    <span className="inline-flex items-center gap-2">
-                      <Icon name="graduation-cap" className="text-brand-violet" />
-                      CSIT, Deerwalk Institute
-                    </span>
-                  </div>
+                <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-ink-600 reveal reveal-d3">
+                  <span className="inline-flex items-center gap-2">
+                    <Icon name="map-pin" className="text-brand-violet" />
+                    Kupondole, Lalitpur
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <Icon name="briefcase" className="text-brand-violet" />
+                    UI/UX @ Xuno
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <Icon name="sparkles" className="text-brand-violet twinkle" />
+                    Open to select work
+                  </span>
                 </div>
-                <div className="lg:col-span-4 reveal reveal-d2">
-                  <div className="relative aspect-square max-w-sm mx-auto">
-                    <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-brand-indigo via-brand-violet to-brand-fuchsia blur-3xl opacity-40" />
-                    <div className="relative h-full w-full rounded-[2.5rem] glass-strong gradient-border p-6 flex flex-col justify-between overflow-hidden">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono text-ink-300">// now playing</span>
-                        <span className="flex gap-1">
-                          <span className="h-2 w-2 rounded-full bg-rose-400/70" />
-                          <span className="h-2 w-2 rounded-full bg-amber-300/70" />
-                          <span className="h-2 w-2 rounded-full bg-emerald-400/70" />
+              </div>
+              <div className="lg:col-span-4 reveal reveal-d2">
+                <div className="relative aspect-square max-w-sm mx-auto float-slow">
+                  <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-brand-indigo via-brand-violet to-brand-pink blur-3xl opacity-25" />
+                  <Sparkle
+                    size={22}
+                    hue="pink"
+                    className="twinkle-2 z-20"
+                    style={{ top: "-10px", right: "10%" }}
+                  />
+                  <Sparkle
+                    size={16}
+                    hue="indigo"
+                    className="twinkle-3 z-20"
+                    style={{ bottom: "8%", left: "-12px" }}
+                  />
+                  <div className="relative h-full w-full rounded-[2.5rem] glass-strong gradient-border p-6 flex flex-col justify-between overflow-hidden">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-mono text-ink-500">
+                        right now
+                      </span>
+                      <span className="flex gap-1">
+                        <span className="h-2 w-2 rounded-full bg-rose-400" />
+                        <span className="h-2 w-2 rounded-full bg-amber-400" />
+                        <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                      </span>
+                    </div>
+                    <div>
+                      <div className="text-[6rem] leading-none font-display font-bold gradient-text spin-slow">
+                        ✱
+                      </div>
+                      <div className="mt-3 text-sm text-ink-700">
+                        designing for{" "}
+                        <span className="text-ink-950 font-medium">
+                          people
                         </span>
+                        , made with{" "}
+                        <span className="text-ink-950 font-medium">
+                          intention
+                        </span>
+                        .
                       </div>
+                    </div>
+                    <div className="flex items-end justify-between">
                       <div>
-                        <div className="text-[6rem] leading-none font-display font-bold gradient-text">
-                          ✱
+                        <div className="text-3xl font-display font-bold text-ink-950">
+                          <Counter target="5" suffix="+" />
                         </div>
-                        <div className="mt-3 text-sm text-ink-200">
-                          designing for{" "}
-                          <span className="text-white font-medium">people</span>,{" "}
-                          building with{" "}
-                          <span className="text-white font-medium">intention</span>.
+                        <div className="text-xs text-ink-500">
+                          years designing
                         </div>
                       </div>
-                      <div className="flex items-end justify-between">
-                        <div>
-                          <div className="text-3xl font-display font-bold text-white">5+</div>
-                          <div className="text-xs text-ink-300">years designing</div>
+                      <div className="text-right">
+                        <div className="text-3xl font-display font-bold text-ink-950">
+                          <Counter target="10" suffix="+" />
                         </div>
-                        <div className="text-right">
-                          <div className="text-3xl font-display font-bold text-white">10+</div>
-                          <div className="text-xs text-ink-300">shipped projects</div>
+                        <div className="text-xs text-ink-500">
+                          shipped projects
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-20 hidden lg:flex justify-center reveal reveal-d3">
-                <a href="#about" className="text-ink-300 hover:text-ink-100 flex flex-col items-center gap-2 group">
-                  <span className="text-xs font-mono tracking-widest">SCROLL</span>
-                  <Icon name="chevron-down" className="text-xl group-hover:translate-y-1 transition-transform" />
-                </a>
+            </div>
+            <div className="mt-20 hidden lg:flex justify-center reveal reveal-d4">
+              <a
+                href="#about"
+                className="text-ink-500 hover:text-ink-950 flex flex-col items-center gap-2 group"
+              >
+                <span className="text-xs font-mono tracking-widest">
+                  SCROLL
+                </span>
+                <Icon
+                  name="chevron-down"
+                  className="text-xl group-hover:translate-y-1 transition-transform"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ---------- Marquee ----------
+    function Marquee() {
+      const itemsA = [
+        "User research",
+        "Visual systems",
+        "Figma",
+        "Branding",
+        "E-commerce",
+        "Fintech",
+        "Mobile UI",
+        "Prototyping",
+        "Design systems",
+        "Editorial",
+      ];
+      const itemsB = [
+        "Type",
+        "Color",
+        "Motion",
+        "Iteration",
+        "Empathy",
+        "Wireframes",
+        "Lo-fi → Hi-fi",
+        "Layout",
+        "Storytelling",
+        "Craft",
+      ];
+      const rowA = [...itemsA, ...itemsA];
+      const rowB = [...itemsB, ...itemsB];
+      return (
+        <div className="relative py-6 border-y border-ink-950/5 bg-ink-950/[0.015] overflow-hidden">
+          <div className="flex marquee-track whitespace-nowrap gap-12 text-2xl sm:text-3xl font-display font-medium text-ink-500">
+            {rowA.map((t, i) => (
+              <span key={i} className="flex items-center gap-12">
+                <span>{t}</span>
+                <span className="text-brand-violet">✦</span>
+              </span>
+            ))}
+          </div>
+          <div className="flex marquee-track-rev whitespace-nowrap gap-10 mt-3 text-base sm:text-lg font-mono text-ink-400">
+            {rowB.map((t, i) => (
+              <span key={i} className="flex items-center gap-10">
+                <span>{t}</span>
+                <span className="text-brand-pink">✿</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    // ---------- About ----------
+    function About() {
+      const stats = [
+        { v: "3", l: "design roles", suffix: "" },
+        { v: "10", l: "live projects", suffix: "+" },
+        { v: "4", l: "industries", suffix: "" },
+      ];
+      return (
+        <section id="about" className="relative py-28">
+          <div className="mx-auto max-w-6xl px-5">
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+              <div className="lg:col-span-5 reveal">
+                <SectionLabel index="01">About</SectionLabel>
+                <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-tight text-ink-950">
+                  A designer with an{" "}
+                  <span className="gradient-text">engineer's mindset</span>.
+                </h2>
+              </div>
+              <div className="lg:col-span-7 space-y-6 text-ink-700 leading-relaxed text-lg reveal reveal-d1">
+                <p>
+                  I'm Selene — a UI/UX designer working with teams across{" "}
+                  <span className="text-ink-950">
+                    e-commerce, fintech, and consumer apps
+                  </span>
+                  . I think in user flows, color tokens, and visual systems,
+                  and I love the slow, deliberate work of turning research
+                  into a product people actually enjoy using.
+                </p>
+                <p>
+                  Right now I'm part of the design team at{" "}
+                  <span className="text-ink-950">Xuno</span>, building a
+                  consistent visual system and shipping features in Figma.
+                  Before that, I freelanced on e-commerce products, ran social
+                  and graphic design for a waterpark brand, and kept
+                  stretching my craft on every brief.
+                </p>
+                <p>
+                  I care about interfaces that feel obvious in hindsight, copy
+                  that doesn't waste a word, and design that respects user
+                  time. I'm happiest in the messy middle — the part where
+                  research turns into pixels turns into shipped product.
+                </p>
+                <div className="mt-10 grid grid-cols-3 gap-4">
+                  {stats.map((s, i) => (
+                    <div
+                      key={i}
+                      className="glass card-lift rounded-2xl p-5 text-center"
+                    >
+                      <div className="text-3xl sm:text-4xl font-display font-bold gradient-text">
+                        <Counter target={s.v} suffix={s.suffix} />
+                      </div>
+                      <div className="mt-1 text-xs font-mono uppercase tracking-wider text-ink-500">
+                        {s.l}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </section>
-        );
-      }
+          </div>
+        </section>
+      );
+    }
 
-      // ---------- Marquee ----------
-      function Marquee() {
-        const items = [
-          "User research",
-          "Visual systems",
-          "Figma",
-          "Branding",
-          "E-commerce",
-          "Fintech",
-          "Mobile UI",
-          "Prototyping",
-          "Design systems",
-          "Front-end",
-        ];
-        const row = [...items, ...items];
-        return (
-          <div className="relative py-8 border-y border-white/5 bg-white/[0.015] overflow-hidden">
-            <div className="flex marquee-track whitespace-nowrap gap-12 text-2xl sm:text-3xl font-display font-medium text-ink-300">
-              {row.map((t, i) => (
-                <span key={i} className="flex items-center gap-12">
-                  <span>{t}</span>
-                  <span className="text-brand-violet">✦</span>
-                </span>
+    // ---------- Experience ----------
+    function Experience() {
+      const roles = [
+        {
+          role: "UI/UX Designer",
+          company: "Xuno",
+          type: "Part Time",
+          location: "Ellensburg, Washington",
+          period: "May 2024 — Present",
+          current: true,
+          bullets: [
+            "Creating and maintaining a consistent visual system and brand expression in Figma.",
+            "Collaborating with cross-functional teams to ship cohesive UI for the app.",
+            "Performing user research and usability testing to inform design decisions.",
+          ],
+        },
+        {
+          role: "UI/UX Designer",
+          company: "Code Verse Nepal",
+          type: "Freelance",
+          location: "Kathmandu",
+          period: "Mar 2024 — Jun 2024",
+          current: false,
+          bullets: [
+            "Designed an end-to-end e-commerce experience under a contract engagement.",
+            "Worked closely with the team to deliver a seamless, accessible shopping flow.",
+          ],
+        },
+        {
+          role: "Graphic Designer & Social Media Manager",
+          company: "Big Splash Waterpark",
+          type: "Freelance",
+          location: "Pokhara",
+          period: "Feb 2021 — Nov 2023",
+          current: false,
+          bullets: [
+            "Coordinated page layouts, banners, and promotional graphics across channels.",
+            "Designed in Photoshop, Canva, and Figma; formatted print and digital deliverables in Adobe CS.",
+            "Owned multiple social media accounts and produced campaign content end-to-end.",
+          ],
+        },
+      ];
+      return (
+        <section id="work" className="relative py-28">
+          <div className="mx-auto max-w-6xl px-5">
+            <div className="reveal">
+              <SectionLabel index="02">Experience</SectionLabel>
+              <div className="mt-5 flex items-end justify-between flex-wrap gap-4">
+                <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight max-w-xl text-ink-950">
+                  A designer with an{" "}
+                  <span className="gradient-text">designed</span> & shipped.
+                </h2>
+                <p className="text-ink-500 text-sm font-mono">
+                  {roles.length} roles · 5+ years
+                </p>
+              </div>
+            </div>
+            <div className="mt-14 space-y-5">
+              {roles.map((r, i) => (
+                <article
+                  key={i}
+                  className="reveal group glass card-lift rounded-3xl p-6 sm:p-8"
+                  style={{ transitionDelay: i * 80 + "ms" }}
+                >
+                  <div className="grid lg:grid-cols-12 gap-6">
+                    <div className="lg:col-span-4">
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <span className="text-xs font-mono text-ink-500">
+                          {r.period}
+                        </span>
+                        {r.current && (
+                          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-emerald-700">
+                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                            Current
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="mt-3 font-display text-2xl font-semibold text-ink-950">
+                        {r.role}
+                      </h3>
+                      <div className="mt-1 text-ink-700">
+                        <span className="font-medium text-brand-violet">
+                          {r.company}
+                        </span>
+                        <span className="text-ink-400"> · {r.type}</span>
+                      </div>
+                      <div className="mt-1 text-sm text-ink-500 inline-flex items-center gap-1.5">
+                        <Icon name="map-pin" className="text-xs" />
+                        {r.location}
+                      </div>
+                    </div>
+                    <ul className="lg:col-span-8 space-y-3 text-ink-700">
+                      {r.bullets.map((b, j) => (
+                        <li key={j} className="flex gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-brand-violet to-brand-pink" />
+                          <span className="leading-relaxed">{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
-        );
-      }
+        </section>
+      );
+    }
 
-      // ---------- About ----------
-      function About() {
-        const stats = [
-          { v: "3", l: "design roles" },
-          { v: "10+", l: "live projects" },
-          { v: "2026", l: "CSIT senior" },
-        ];
-        return (
-          <section id="about" className="relative py-28">
-            <div className="mx-auto max-w-6xl px-5">
-              <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-                <div className="lg:col-span-5 reveal">
-                  <SectionLabel index="01">About</SectionLabel>
-                  <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-tight">
-                    A designer with an{" "}
-                    <span className="gradient-text">engineer's mindset</span>.
-                  </h2>
-                </div>
-                <div className="lg:col-span-7 space-y-6 text-ink-200 leading-relaxed text-lg reveal reveal-d1">
-                  <p>
-                    I'm Selene — a 4th-year CSIT student at{" "}
-                    <span className="text-white">Deerwalk Institute of Technology</span>{" "}
-                    and a UI/UX designer working with teams across e-commerce, fintech, and
-                    consumer apps. My background straddles two worlds: I think in user flows
-                    and color tokens, but I'm just as comfortable in HTML, CSS, and JavaScript.
-                  </p>
-                  <p>
-                    Right now I'm part of the design team at{" "}
-                    <span className="text-white">Xuno</span>, building consistent visual systems
-                    and shipping features in Figma. Before that, I freelanced on e-commerce
-                    products, ran social and graphic design for a waterpark brand, and kept
-                    learning every other weekend.
-                  </p>
-                  <p>
-                    I care about interfaces that feel obvious in hindsight, copy that doesn't
-                    waste a word, and design that respects engineering constraints. I'm
-                    happiest in the messy middle — the part where research turns into pixels
-                    turns into shipped product.
-                  </p>
-                  <div className="mt-10 grid grid-cols-3 gap-4">
-                    {stats.map((s, i) => (
-                      <div
-                        key={i}
-                        className="glass rounded-2xl p-5 text-center"
-                      >
-                        <div className="text-3xl sm:text-4xl font-display font-bold gradient-text">
-                          {s.v}
-                        </div>
-                        <div className="mt-1 text-xs font-mono uppercase tracking-wider text-ink-300">
-                          {s.l}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+    // ---------- Skills (Bento) ----------
+    function Skills() {
+      const tools = [
+        { name: "Figma", icon: "figma" },
+        { name: "Sketch", icon: "pen-tool" },
+        { name: "Photoshop", icon: "image" },
+        { name: "Illustrator", icon: "shapes" },
+        { name: "InDesign", icon: "book-text" },
+        { name: "Canva", icon: "palette" },
+      ];
+      return (
+        <section id="skills" className="relative py-28">
+          <div className="mx-auto max-w-6xl px-5">
+            <div className="reveal max-w-2xl">
+              <SectionLabel index="03">Skills & Stack</SectionLabel>
+              <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-tight text-ink-950">
+                The toolkit, in a{" "}
+                <span className="gradient-text">bento box</span>.
+              </h2>
             </div>
-          </section>
-        );
-      }
 
-      // ---------- Experience ----------
-      function Experience() {
-        const roles = [
-          {
-            role: "UI/UX Designer",
-            company: "Xuno",
-            type: "Part Time",
-            location: "Ellensburg, Washington",
-            period: "May 2024 — Present",
-            current: true,
-            bullets: [
-              "Creating and maintaining a consistent visual system and brand expression in Figma.",
-              "Collaborating with cross-functional teams to ship cohesive UI for the app.",
-              "Performing user research and usability testing to inform design decisions.",
-            ],
-          },
-          {
-            role: "UI/UX Designer",
-            company: "Code Verse Nepal",
-            type: "Freelance",
-            location: "Kathmandu",
-            period: "Mar 2024 — Jun 2024",
-            current: false,
-            bullets: [
-              "Designed an end-to-end e-commerce experience under a contract engagement.",
-              "Worked closely with the dev team to deliver a seamless, accessible shopping flow.",
-            ],
-          },
-          {
-            role: "Graphic Designer & Social Media Manager",
-            company: "Big Splash Waterpark",
-            type: "Freelance",
-            location: "Pokhara",
-            period: "Feb 2021 — Nov 2023",
-            current: false,
-            bullets: [
-              "Coordinated page layouts, banners, and promotional graphics across channels.",
-              "Designed in Photoshop, Canva, and Figma; formatted print and digital deliverables in Adobe CS.",
-              "Owned multiple social media accounts and produced campaign content end-to-end.",
-            ],
-          },
-        ];
-        return (
-          <section id="work" className="relative py-28">
-            <div className="mx-auto max-w-6xl px-5">
-              <div className="reveal">
-                <SectionLabel index="02">Experience</SectionLabel>
-                <div className="mt-5 flex items-end justify-between flex-wrap gap-4">
-                  <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight max-w-xl">
-                    Where I've <span className="gradient-text">designed</span> & shipped.
-                  </h2>
-                  <p className="text-ink-300 text-sm font-mono">
-                    {roles.length} roles · 5+ years
+            <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[160px]">
+              {/* Big tile */}
+              <div className="reveal col-span-2 row-span-2 glass-strong gradient-border card-lift rounded-3xl p-7 relative overflow-hidden flex flex-col justify-between">
+                <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-brand-violet/25 blur-3xl" />
+                <div className="absolute -left-12 bottom-0 h-40 w-40 rounded-full bg-brand-pink/20 blur-3xl" />
+                <Sparkle
+                  size={18}
+                  hue="pink"
+                  className="twinkle-2"
+                  style={{ top: 18, right: 18 }}
+                />
+                <div className="relative">
+                  <div className="hover-wobble inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-gradient-to-br from-brand-violet to-brand-pink text-white text-2xl mb-5 shadow-md shadow-brand-violet/30">
+                    <Icon name="compass" />
+                  </div>
+                  <h3 className="font-display text-2xl font-semibold text-ink-950">
+                    Design Leadership
+                  </h3>
+                  <p className="mt-2 text-ink-700 leading-relaxed max-w-sm">
+                    Setting visual direction, shaping design systems, and
+                    leading research-driven decisions across product squads.
                   </p>
                 </div>
-              </div>
-              <div className="mt-14 space-y-5">
-                {roles.map((r, i) => (
-                  <article
-                    key={i}
-                    className="reveal group glass rounded-3xl p-6 sm:p-8 hover:bg-white/[0.06] transition-colors"
-                    style={{ transitionDelay: i * 80 + "ms" }}
-                  >
-                    <div className="grid lg:grid-cols-12 gap-6">
-                      <div className="lg:col-span-4">
-                        <div className="flex items-center gap-3">
-                          <span className="text-xs font-mono text-ink-300">
-                            {r.period}
-                          </span>
-                          {r.current && (
-                            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/10 border border-emerald-400/20 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-emerald-300">
-                              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                              Current
-                            </span>
-                          )}
-                        </div>
-                        <h3 className="mt-3 font-display text-2xl font-semibold text-white">
-                          {r.role}
-                        </h3>
-                        <div className="mt-1 text-ink-200">
-                          <span className="font-medium text-brand-violet">
-                            {r.company}
-                          </span>
-                          <span className="text-ink-400"> · {r.type}</span>
-                        </div>
-                        <div className="mt-1 text-sm text-ink-300 inline-flex items-center gap-1.5">
-                          <Icon name="map-pin" className="text-xs" />
-                          {r.location}
-                        </div>
-                      </div>
-                      <ul className="lg:col-span-8 space-y-3 text-ink-200">
-                        {r.bullets.map((b, j) => (
-                          <li key={j} className="flex gap-3">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-brand-indigo to-brand-violet" />
-                            <span className="leading-relaxed">{b}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      }
-
-      // ---------- Skills (Bento) ----------
-      function Skills() {
-        const tools = [
-          { name: "Figma", icon: "figma" },
-          { name: "Sketch", icon: "pen-tool" },
-          { name: "Adobe CC", icon: "palette" },
-          { name: "HTML", icon: "code" },
-          { name: "CSS", icon: "code-2" },
-          { name: "JavaScript", icon: "braces" },
-        ];
-        return (
-          <section id="skills" className="relative py-28">
-            <div className="mx-auto max-w-6xl px-5">
-              <div className="reveal max-w-2xl">
-                <SectionLabel index="03">Skills & Stack</SectionLabel>
-                <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-tight">
-                  The toolkit, in a{" "}
-                  <span className="gradient-text">bento box</span>.
-                </h2>
-              </div>
-
-              <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[160px]">
-                {/* Big tile: Design Leadership */}
-                <div className="reveal col-span-2 row-span-2 glass-strong gradient-border rounded-3xl p-7 relative overflow-hidden flex flex-col justify-between">
-                  <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-brand-violet/30 blur-3xl" />
-                  <div className="relative">
-                    <div className="inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-gradient-to-br from-brand-indigo to-brand-violet text-white text-2xl mb-5">
-                      <Icon name="compass" />
-                    </div>
-                    <h3 className="font-display text-2xl font-semibold text-white">
-                      Design Leadership
-                    </h3>
-                    <p className="mt-2 text-ink-200 leading-relaxed max-w-sm">
-                      Setting visual direction, shaping design systems, and leading
-                      research-driven decisions across product squads.
-                    </p>
-                  </div>
-                  <div className="relative flex flex-wrap gap-2">
-                    {["Strategy", "Critique", "Systems", "Mentoring"].map((t) => (
+                <div className="relative flex flex-wrap gap-2">
+                  {["Strategy", "Critique", "Systems", "Mentoring"].map(
+                    (t) => (
                       <span
                         key={t}
-                        className="text-xs font-mono px-3 py-1 rounded-full bg-white/5 border border-white/10 text-ink-200"
+                        className="text-xs font-mono px-3 py-1 rounded-full bg-ink-950/5 border border-ink-950/10 text-ink-700"
                       >
                         {t}
                       </span>
-                    ))}
-                  </div>
+                    )
+                  )}
                 </div>
+              </div>
 
-                {/* Interface Design */}
-                <div className="reveal reveal-d1 glass rounded-3xl p-6 relative overflow-hidden">
+              {/* Interface */}
+              <div className="reveal reveal-d1 glass card-lift rounded-3xl p-6 relative overflow-hidden">
+                <div className="hover-wobble inline-block">
                   <Icon name="layout" className="text-3xl text-brand-cyan" />
-                  <h3 className="mt-3 font-display text-lg font-semibold text-white">
-                    Interface Design
-                  </h3>
-                  <p className="mt-1 text-sm text-ink-300">
-                    Pixel-precise layouts, components, and motion.
-                  </p>
                 </div>
+                <h3 className="mt-3 font-display text-lg font-semibold text-ink-950">
+                  Interface Design
+                </h3>
+                <p className="mt-1 text-sm text-ink-500">
+                  Pixel-precise layouts, components, and motion.
+                </p>
+              </div>
 
-                {/* Experience Design */}
-                <div className="reveal reveal-d2 glass rounded-3xl p-6 relative overflow-hidden">
+              {/* Experience */}
+              <div className="reveal reveal-d2 glass card-lift rounded-3xl p-6 relative overflow-hidden">
+                <div className="hover-wobble inline-block">
                   <Icon name="users" className="text-3xl text-brand-violet" />
-                  <h3 className="mt-3 font-display text-lg font-semibold text-white">
-                    Experience Design
-                  </h3>
-                  <p className="mt-1 text-sm text-ink-300">
-                    Flows that respect attention and intent.
-                  </p>
                 </div>
+                <h3 className="mt-3 font-display text-lg font-semibold text-ink-950">
+                  Experience Design
+                </h3>
+                <p className="mt-1 text-sm text-ink-500">
+                  Flows that respect attention and intent.
+                </p>
+              </div>
 
-                {/* Digital Media */}
-                <div className="reveal reveal-d1 glass rounded-3xl p-6 relative overflow-hidden">
+              {/* Digital Media */}
+              <div className="reveal reveal-d1 glass card-lift rounded-3xl p-6 relative overflow-hidden">
+                <div className="hover-wobble inline-block">
                   <Icon name="image" className="text-3xl text-brand-fuchsia" />
-                  <h3 className="mt-3 font-display text-lg font-semibold text-white">
-                    Digital Media
-                  </h3>
-                  <p className="mt-1 text-sm text-ink-300">
-                    Brand visuals, campaigns, social systems.
-                  </p>
                 </div>
+                <h3 className="mt-3 font-display text-lg font-semibold text-ink-950">
+                  Digital Media
+                </h3>
+                <p className="mt-1 text-sm text-ink-500">
+                  Brand visuals, campaigns, social systems.
+                </p>
+              </div>
 
-                {/* Contextual Design */}
-                <div className="reveal reveal-d2 glass rounded-3xl p-6 relative overflow-hidden">
+              {/* Contextual */}
+              <div className="reveal reveal-d2 glass card-lift rounded-3xl p-6 relative overflow-hidden">
+                <div className="hover-wobble inline-block">
                   <Icon name="search" className="text-3xl text-brand-indigo" />
-                  <h3 className="mt-3 font-display text-lg font-semibold text-white">
-                    Contextual Design
-                  </h3>
-                  <p className="mt-1 text-sm text-ink-300">
-                    Research-led, situated in real user lives.
-                  </p>
                 </div>
+                <h3 className="mt-3 font-display text-lg font-semibold text-ink-950">
+                  Contextual Design
+                </h3>
+                <p className="mt-1 text-sm text-ink-500">
+                  Research-led, situated in real user lives.
+                </p>
+              </div>
 
-                {/* Tools row spans 4 */}
-                <div className="reveal col-span-2 lg:col-span-4 glass rounded-3xl p-6 relative overflow-hidden">
-                  <div className="flex items-center justify-between mb-5">
-                    <div>
-                      <h3 className="font-display text-lg font-semibold text-white">
-                        Tools I reach for
-                      </h3>
-                      <p className="text-sm text-ink-300">
-                        Daily-driver design + front-end tools.
-                      </p>
-                    </div>
-                    <span className="text-xs font-mono text-ink-300 hidden sm:block">
-                      // stack
-                    </span>
+              {/* Tools row */}
+              <div className="reveal col-span-2 lg:col-span-4 row-span-2 glass card-lift rounded-3xl p-6 relative overflow-hidden">
+                <div className="flex items-center justify-between mb-5">
+                  <div>
+                    <h3 className="font-display text-lg font-semibold text-ink-950">
+                      Tools I reach for
+                    </h3>
+                    <p className="text-sm text-ink-500">
+                      Daily-driver design tools.
+                    </p>
                   </div>
-                  <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-                    {tools.map((t) => (
-                      <div
-                        key={t.name}
-                        className="group flex flex-col items-center justify-center gap-2 rounded-2xl border border-white/8 bg-white/[0.025] p-4 hover:bg-white/[0.06] hover:border-white/15 transition-all"
-                      >
+                  <span className="text-xs font-mono text-ink-500 hidden sm:block">
+                    ✿ toolbox
+                  </span>
+                </div>
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+                  {tools.map((t) => (
+                    <div
+                      key={t.name}
+                      className="tool-tile group flex flex-col items-center justify-center gap-2 rounded-2xl border border-ink-950/8 bg-white/60 p-4 hover:bg-white hover:border-ink-950/15 hover:shadow-md hover:shadow-ink-950/5"
+                    >
+                      <span className="tool-icon inline-block">
                         <Icon
                           name={t.icon}
-                          className="text-2xl text-ink-200 group-hover:text-brand-violet transition-colors"
+                          className="text-2xl text-ink-700 group-hover:text-brand-violet transition-colors"
                         />
-                        <span className="text-xs font-medium text-ink-200">
-                          {t.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                      </span>
+                      <span className="text-xs font-medium text-ink-700">
+                        {t.name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
-          </section>
-        );
-      }
-
-      // ---------- Projects ----------
-      function ProjectArt({ from, via, to, label }) {
-        return (
-          <div
-            className="project-art absolute inset-0"
-            style={{
-              background: `radial-gradient(circle at 20% 20%, ${from}, transparent 50%), radial-gradient(circle at 80% 70%, ${to}, transparent 55%), linear-gradient(135deg, ${from}, ${via} 50%, ${to})`,
-            }}
-          >
-            <div className="absolute inset-0 grid-bg opacity-30" />
-            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-              <span className="text-[5rem] leading-none font-display font-bold text-white/15">
-                {label}
-              </span>
             </div>
           </div>
-        );
-      }
+        </section>
+      );
+    }
 
-      function Projects() {
-        const projects = [
-          {
-            name: "Fitwell",
-            tag: "Fitness & Health",
-            desc: "A fitness and health web app I built using HTML, CSS, and JavaScript — pairing motivational visuals with workout/nutrition tracking.",
-            chips: ["Web App", "HTML/CSS/JS", "Health"],
-            from: "#10b981",
-            via: "#0ea5e9",
-            to: "#6366f1",
-            label: "Ftw",
-            featured: true,
-          },
-          {
-            name: "Mountemart",
-            tag: "E-commerce platform",
-            desc: "An online marketplace concept focused on regional goods — clean product cards, frictionless cart, and a culturally-rooted brand voice.",
-            chips: ["E-commerce", "UX", "Branding"],
-            from: "#f97316",
-            via: "#ef4444",
-            to: "#a855f7",
-            label: "Mt",
-          },
-          {
-            name: "XUNO Beneficiary",
-            tag: "Fintech app",
-            desc: "Beneficiary management surface for a fintech product — designed for trust, speed, and zero-mistake money movement.",
-            chips: ["Fintech", "Mobile", "System"],
-            from: "#6366f1",
-            via: "#8b5cf6",
-            to: "#22d3ee",
-            label: "Xn",
-          },
-          {
-            name: "SmartBuy",
-            tag: "E-commerce",
-            desc: "An end-to-end e-commerce platform — search, browse, checkout — designed for thumb-friendly mobile-first shopping.",
-            chips: ["E-commerce", "Mobile", "Flow"],
-            from: "#ec4899",
-            via: "#a855f7",
-            to: "#3b82f6",
-            label: "Sb",
-          },
-          {
-            name: "SM",
-            tag: "Online clothing store",
-            desc: "A minimalist apparel storefront concept — moody photography, restrained typography, and a lookbook-first browsing experience.",
-            chips: ["Retail", "Brand", "Editorial"],
-            from: "#1f2937",
-            via: "#4b5563",
-            to: "#a855f7",
-            label: "Sm",
-          },
-        ];
-        return (
-          <section id="projects" className="relative py-28">
-            <div className="mx-auto max-w-6xl px-5">
-              <div className="reveal">
-                <SectionLabel index="04">Selected projects</SectionLabel>
-                <div className="mt-5 flex items-end justify-between flex-wrap gap-4">
-                  <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight max-w-2xl">
-                    Things I've{" "}
-                    <span className="gradient-text">designed</span>,{" "}
-                    <span className="gradient-text">built</span>, and shipped.
-                  </h2>
-                  <p className="text-ink-300 text-sm max-w-xs">
-                    A mix of real client work and personal explorations. Hover any card for the full story.
-                  </p>
-                </div>
+    // ---------- Projects ----------
+    function ArtFitness() {
+      return (
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 400 280"
+          preserveAspectRatio="xMidYMid slice"
+          fill="none"
+        >
+          <defs>
+            <linearGradient id="ftw-bar" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="white" stopOpacity="0.4" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M 0 88 L 92 88 L 108 56 L 124 124 L 140 64 L 156 100 L 400 100"
+            stroke="white"
+            strokeOpacity="0.85"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <g className="art-pulse">
+            <circle cx="335" cy="55" r="36" fill="white" fillOpacity="0.18" />
+            <circle cx="335" cy="55" r="20" fill="white" fillOpacity="0.55" />
+          </g>
+          <g className="art-bars">
+            <rect x="46" y="180" width="22" height="60" rx="5" fill="url(#ftw-bar)" />
+            <rect x="80" y="155" width="22" height="85" rx="5" fill="url(#ftw-bar)" />
+            <rect x="114" y="200" width="22" height="40" rx="5" fill="url(#ftw-bar)" />
+            <rect x="148" y="135" width="22" height="105" rx="5" fill="white" fillOpacity="0.95" />
+            <rect x="182" y="170" width="22" height="70" rx="5" fill="url(#ftw-bar)" />
+          </g>
+          <circle className="art-bob" cx="282" cy="180" r="4" fill="white" opacity="0.7" />
+          <circle className="art-bob" style={{ animationDelay: "0.6s" }} cx="350" cy="220" r="3" fill="white" opacity="0.6" />
+          <circle className="art-bob" style={{ animationDelay: "1.2s" }} cx="60" cy="46" r="3" fill="white" opacity="0.6" />
+        </svg>
+      );
+    }
+
+    function ArtMarket() {
+      return (
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 400 280"
+          preserveAspectRatio="xMidYMid slice"
+          fill="none"
+        >
+          <g className="art-pulse">
+            <circle cx="100" cy="100" r="48" fill="rgba(255, 235, 180, 0.5)" />
+            <circle cx="100" cy="100" r="28" fill="rgba(255, 245, 220, 0.85)" />
+          </g>
+          <polygon points="-20,300 130,80 270,300" fill="white" fillOpacity="0.18" />
+          <polygon points="80,300 235,40 380,300" fill="white" fillOpacity="0.32" />
+          <polygon points="190,300 310,140 430,300" fill="white" fillOpacity="0.55" />
+          <path d="M 220 60 L 235 40 L 250 60 L 244 64 L 240 60 L 232 64 Z" fill="white" fillOpacity="0.95" />
+          <circle className="art-bob" cx="50" cy="36" r="3" fill="white" opacity="0.75" />
+          <circle className="art-bob" style={{ animationDelay: "0.5s" }} cx="290" cy="38" r="2.5" fill="white" opacity="0.7" />
+          <circle className="art-bob" style={{ animationDelay: "1s" }} cx="370" cy="80" r="3" fill="white" opacity="0.6" />
+        </svg>
+      );
+    }
+
+    function ArtFintech() {
+      return (
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 400 280"
+          preserveAspectRatio="xMidYMid slice"
+          fill="none"
+        >
+          <defs>
+            <linearGradient id="xn-shine" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="white" stopOpacity="0.45" />
+              <stop offset="100%" stopColor="white" stopOpacity="0.1" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(48 56)">
+            <g className="art-bob">
+              <circle r="22" cx="0" cy="0" fill="white" fillOpacity="0.22" />
+              <path d="M -9 0 L -2 7 L 9 -7" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </g>
+          </g>
+          <g transform="translate(150 90)">
+            <g className="art-tilt">
+              <rect width="200" height="120" rx="14" fill="url(#xn-shine)" stroke="white" strokeOpacity="0.5" strokeWidth="1.5" />
+              <rect x="16" y="20" width="40" height="30" rx="5" fill="rgba(255, 200, 80, 0.95)" />
+              <rect x="16" y="80" width="100" height="6" rx="3" fill="white" fillOpacity="0.7" />
+              <rect x="16" y="95" width="60" height="5" rx="2.5" fill="white" fillOpacity="0.5" />
+              <circle cx="158" cy="92" r="16" fill="white" fillOpacity="0.45" />
+              <circle cx="174" cy="92" r="16" fill="white" fillOpacity="0.45" />
+            </g>
+          </g>
+          <g transform="translate(20 222)">
+            <rect width="120" height="6" rx="3" fill="white" fillOpacity="0.6" />
+            <rect y="14" width="100" height="6" rx="3" fill="white" fillOpacity="0.45" />
+          </g>
+        </svg>
+      );
+    }
+
+    function ArtShop() {
+      return (
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 400 280"
+          preserveAspectRatio="xMidYMid slice"
+          fill="none"
+        >
+          <g transform="translate(70 70)">
+            <g className="art-bob">
+              <path
+                d="M 0 35 L 0 130 Q 0 142 12 142 L 108 142 Q 120 142 120 130 L 120 35 Z"
+                fill="white"
+                fillOpacity="0.22"
+                stroke="white"
+                strokeOpacity="0.65"
+                strokeWidth="2"
+              />
+              <path
+                d="M 30 35 Q 30 5 60 5 Q 90 5 90 35"
+                stroke="white"
+                strokeOpacity="0.75"
+                strokeWidth="3"
+                fill="none"
+                strokeLinecap="round"
+              />
+            </g>
+          </g>
+          <g transform="translate(280 130)">
+            <g className="art-tilt">
+              <path d="M 0 0 L 60 0 L 84 24 L 84 88 L 0 88 Z" fill="white" fillOpacity="0.92" />
+              <circle cx="68" cy="14" r="5" fill="rgba(0, 0, 0, 0.4)" />
+              <line x1="14" y1="44" x2="62" y2="44" stroke="rgba(0, 0, 0, 0.35)" strokeWidth="3" strokeLinecap="round" />
+              <line x1="14" y1="60" x2="50" y2="60" stroke="rgba(0, 0, 0, 0.25)" strokeWidth="3" strokeLinecap="round" />
+            </g>
+          </g>
+          <circle className="art-pulse" cx="220" cy="50" r="5" fill="white" opacity="0.85" />
+          <circle className="art-pulse" style={{ animationDelay: "0.7s" }} cx="50" cy="244" r="4" fill="white" opacity="0.7" />
+        </svg>
+      );
+    }
+
+    function ArtClothing() {
+      return (
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 400 280"
+          preserveAspectRatio="xMidYMid slice"
+          fill="none"
+        >
+          <g transform="translate(150 50)">
+            <g className="art-sway">
+              <line x1="60" y1="-20" x2="60" y2="14" stroke="white" strokeOpacity="0.4" strokeWidth="1.5" strokeDasharray="3 4" />
+              <circle cx="60" cy="14" r="6" fill="none" stroke="white" strokeOpacity="0.7" strokeWidth="2.5" />
+              <line x1="60" y1="20" x2="60" y2="40" stroke="white" strokeOpacity="0.7" strokeWidth="2.5" />
+              <path d="M 60 40 L 14 60 L 106 60 Z" fill="none" stroke="white" strokeOpacity="0.7" strokeWidth="2.5" strokeLinejoin="round" />
+              <path
+                d="M 38 60 L 24 78 L 36 92 L 36 160 L 84 160 L 84 92 L 96 78 L 82 60 L 72 60 Q 60 78 48 60 Z"
+                fill="white"
+                fillOpacity="0.32"
+                stroke="white"
+                strokeOpacity="0.7"
+                strokeWidth="1.8"
+                strokeLinejoin="round"
+              />
+            </g>
+          </g>
+          <g transform="translate(40 110)">
+            <g className="art-tilt">
+              <circle cx="40" cy="6" r="4" fill="none" stroke="white" strokeOpacity="0.5" strokeWidth="2" />
+              <line x1="40" y1="10" x2="40" y2="22" stroke="white" strokeOpacity="0.5" strokeWidth="2" />
+              <path d="M 40 22 L 8 36 L 72 36 Z" fill="none" stroke="white" strokeOpacity="0.5" strokeWidth="2" strokeLinejoin="round" />
+              <path
+                d="M 22 36 L 16 50 L 24 56 L 24 100 L 56 100 L 56 56 L 64 50 L 58 36 L 50 36 Q 40 50 30 36 Z"
+                fill="white"
+                fillOpacity="0.18"
+                stroke="white"
+                strokeOpacity="0.45"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
+              />
+            </g>
+          </g>
+          <circle className="art-pulse" cx="320" cy="200" r="3" fill="white" opacity="0.6" />
+          <circle className="art-pulse" style={{ animationDelay: "0.5s" }} cx="80" cy="240" r="3" fill="white" opacity="0.5" />
+        </svg>
+      );
+    }
+
+    function ProjectArt({ from, via, to, kind, sticker }) {
+      return (
+        <div className="project-art absolute inset-0 overflow-hidden">
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `radial-gradient(circle at 18% 22%, ${from}, transparent 55%), radial-gradient(circle at 82% 78%, ${to}, transparent 60%), radial-gradient(circle at 60% 30%, rgba(255,255,255,0.22), transparent 55%), linear-gradient(135deg, ${from}, ${via} 50%, ${to})`,
+            }}
+          />
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px)",
+              backgroundSize: "20px 20px",
+            }}
+          />
+          <div className="absolute inset-0">
+            {kind === "fitness" && <ArtFitness />}
+            {kind === "market" && <ArtMarket />}
+            {kind === "fintech" && <ArtFintech />}
+            {kind === "shop" && <ArtShop />}
+            {kind === "clothing" && <ArtClothing />}
+          </div>
+          {sticker && (
+            <span
+              className="sticker drift"
+              style={{ top: 18, right: 18 }}
+            >
+              {sticker}
+            </span>
+          )}
+        </div>
+      );
+    }
+
+    function Projects() {
+      const projects = [
+        {
+          name: "Fitwell",
+          tag: "Fitness & Health",
+          desc: "A fitness and health web app — clean dashboards, motivational visuals, and a clear path through tracking workouts and nutrition.",
+          chips: ["Web App", "Health", "UX"],
+          from: "#10b981",
+          via: "#0ea5e9",
+          to: "#6366f1",
+          kind: "fitness",
+          sticker: "💪",
+          featured: true,
+        },
+        {
+          name: "Mountemart",
+          tag: "E-commerce platform",
+          desc: "An online marketplace concept focused on regional goods — clean product cards, frictionless cart, and a culturally-rooted brand voice.",
+          chips: ["E-commerce", "UX", "Branding"],
+          from: "#f97316",
+          via: "#ef4444",
+          to: "#a855f7",
+          kind: "market",
+          sticker: "🏔️",
+        },
+        {
+          name: "XUNO Beneficiary",
+          tag: "Fintech app",
+          desc: "Beneficiary management surface for a fintech product — designed for trust, speed, and zero-mistake money movement.",
+          chips: ["Fintech", "Mobile", "System"],
+          from: "#6366f1",
+          via: "#8b5cf6",
+          to: "#22d3ee",
+          kind: "fintech",
+          sticker: "💳",
+        },
+        {
+          name: "SmartBuy",
+          tag: "E-commerce",
+          desc: "An end-to-end e-commerce platform — search, browse, checkout — designed for thumb-friendly, mobile-first shopping.",
+          chips: ["E-commerce", "Mobile", "Flow"],
+          from: "#ec4899",
+          via: "#a855f7",
+          to: "#3b82f6",
+          kind: "shop",
+          sticker: "🛍️",
+        },
+        {
+          name: "SM",
+          tag: "Online clothing store",
+          desc: "A minimalist apparel storefront concept — moody photography, restrained typography, and a lookbook-first browsing experience.",
+          chips: ["Retail", "Brand", "Editorial"],
+          from: "#1f2937",
+          via: "#4b5563",
+          to: "#a855f7",
+          kind: "clothing",
+          sticker: "👗",
+        },
+      ];
+      return (
+        <section id="projects" className="relative py-28">
+          <div className="mx-auto max-w-6xl px-5">
+            <div className="reveal">
+              <SectionLabel index="04">Selected projects</SectionLabel>
+              <div className="mt-5 flex items-end justify-between flex-wrap gap-4">
+                <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight max-w-2xl text-ink-950">
+                  Things I've{" "}
+                  <span className="gradient-text">designed</span>,{" "}
+                  <span className="gradient-text">crafted</span>, and shipped.
+                </h2>
+                <p className="text-ink-500 text-sm max-w-xs">
+                  A mix of real client work and personal explorations. Hover
+                  any card for the full story.
+                </p>
               </div>
+            </div>
 
-              <div className="mt-14 grid grid-cols-1 md:grid-cols-6 gap-5 auto-rows-[280px]">
-                {projects.map((p, i) => {
-                  const span = p.featured
-                    ? "md:col-span-4 md:row-span-2"
-                    : i === 1
+            <div className="mt-14 grid grid-cols-1 md:grid-cols-6 gap-5 auto-rows-[280px]">
+              {projects.map((p, i) => {
+                const span = p.featured
+                  ? "md:col-span-4 md:row-span-2"
+                  : i === 1
+                    ? "md:col-span-2"
+                    : i === 2
                       ? "md:col-span-2"
-                      : i === 2
-                        ? "md:col-span-2"
-                        : i === 3
-                          ? "md:col-span-3"
-                          : "md:col-span-3";
-                  return (
-                    <article
-                      key={p.name}
-                      className={
-                        "project-card reveal relative rounded-3xl overflow-hidden glass cursor-pointer " +
-                        span
-                      }
-                      style={{ transitionDelay: i * 60 + "ms" }}
-                    >
-                      <ProjectArt
-                        from={p.from}
-                        via={p.via}
-                        to={p.to}
-                        label={p.label}
-                      />
-                      <div className="relative h-full flex flex-col justify-between p-6 sm:p-7">
-                        <div className="flex items-start justify-between">
-                          <div>
-                            <span className="text-xs font-mono text-white/70 uppercase tracking-widest">
-                              {p.tag}
-                            </span>
-                            <h3 className="mt-1 font-display text-2xl sm:text-3xl font-bold text-white drop-shadow">
-                              {p.name}
-                            </h3>
-                          </div>
-                          <span className="rounded-full bg-white/10 backdrop-blur p-2 text-white">
-                            <Icon name="arrow-up-right" className="text-base" />
+                      : i === 3
+                        ? "md:col-span-3"
+                        : "md:col-span-3";
+                return (
+                  <article
+                    key={p.name}
+                    className={
+                      "project-card reveal relative rounded-3xl overflow-hidden glass cursor-pointer " +
+                      span
+                    }
+                    style={{ transitionDelay: i * 60 + "ms" }}
+                  >
+                    <ProjectArt
+                      from={p.from}
+                      via={p.via}
+                      to={p.to}
+                      kind={p.kind}
+                      sticker={p.sticker}
+                    />
+                    <div className="relative h-full flex flex-col justify-between p-6 sm:p-7">
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <span className="text-xs font-mono text-white/80 uppercase tracking-widest drop-shadow">
+                            {p.tag}
                           </span>
+                          <h3 className="mt-1 font-display text-2xl sm:text-3xl font-bold text-white drop-shadow">
+                            {p.name}
+                          </h3>
                         </div>
+                        <span className="rounded-full bg-white/20 backdrop-blur p-2 text-white">
+                          <Icon
+                            name="arrow-up-right"
+                            className="text-base"
+                          />
+                        </span>
+                      </div>
 
-                        <div className="project-overlay">
-                          <div className="rounded-2xl bg-ink-950/70 backdrop-blur-md border border-white/10 p-4">
-                            <p className="text-sm text-ink-100 leading-relaxed">
-                              {p.desc}
-                            </p>
-                            <div className="mt-3 flex flex-wrap gap-2">
-                              {p.chips.map((c) => (
-                                <span
-                                  key={c}
-                                  className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-white/10 text-ink-100"
-                                >
-                                  {c}
-                                </span>
-                              ))}
-                            </div>
+                      <div className="project-overlay">
+                        <div className="rounded-2xl bg-white/90 backdrop-blur-md border border-ink-950/10 p-4 shadow-lg shadow-ink-950/10">
+                          <p className="text-sm text-ink-800 leading-relaxed">
+                            {p.desc}
+                          </p>
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {p.chips.map((c) => (
+                              <span
+                                key={c}
+                                className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-ink-950/5 border border-ink-950/10 text-ink-700"
+                              >
+                                {c}
+                              </span>
+                            ))}
                           </div>
                         </div>
                       </div>
-                    </article>
-                  );
-                })}
-              </div>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
-          </section>
-        );
-      }
+          </div>
+        </section>
+      );
+    }
 
-      // ---------- Education ----------
-      function Education() {
-        const items = [
-          {
-            school: "Deerwalk Institute of Technology",
-            place: "Kathmandu",
-            program: "Bachelors in CSIT",
-            period: "2022 — Present",
-          },
-          {
-            school: "St. Xavier's College, Maitighar",
-            place: "Kathmandu",
-            program: "Highschool",
-            period: "2018 — 2020",
-          },
-          {
-            school: "Gandaki Boarding School",
-            place: "Pokhara",
-            program: "School",
-            period: "2012 — 2018",
-          },
-        ];
-        return (
-          <section className="relative py-20">
-            <div className="mx-auto max-w-6xl px-5">
-              <div className="reveal">
-                <SectionLabel index="05">Education</SectionLabel>
-                <h2 className="mt-5 font-display text-3xl sm:text-4xl font-bold leading-tight">
-                  Where I've <span className="gradient-text">studied</span>.
+    // ---------- Education ----------
+    function Education() {
+      const items = [
+        {
+          school: "Deerwalk Institute of Technology",
+          place: "Kathmandu",
+          program: "Bachelors in CSIT",
+          period: "2022 — 2026",
+        },
+        {
+          school: "St. Xavier's College, Maitighar",
+          place: "Kathmandu",
+          program: "Highschool",
+          period: "2018 — 2020",
+        },
+        {
+          school: "Gandaki Boarding School",
+          place: "Pokhara",
+          program: "School",
+          period: "2012 — 2018",
+        },
+      ];
+      return (
+        <section className="relative py-20">
+          <div className="mx-auto max-w-6xl px-5">
+            <div className="reveal">
+              <SectionLabel index="05">Education</SectionLabel>
+              <h2 className="mt-5 font-display text-3xl sm:text-4xl font-bold leading-tight text-ink-950">
+                Where I've <span className="gradient-text">studied</span>.
+              </h2>
+            </div>
+            <div className="mt-10 grid md:grid-cols-3 gap-4">
+              {items.map((it, i) => (
+                <div
+                  key={i}
+                  className="reveal glass card-lift rounded-2xl p-6"
+                  style={{ transitionDelay: i * 80 + "ms" }}
+                >
+                  <span className="text-xs font-mono text-ink-500">
+                    {it.period}
+                  </span>
+                  <h3 className="mt-2 font-display text-lg font-semibold text-ink-950 leading-tight">
+                    {it.school}
+                  </h3>
+                  <div className="mt-1 text-sm text-ink-700">
+                    {it.program}
+                  </div>
+                  <div className="mt-1 text-xs text-ink-500 inline-flex items-center gap-1.5">
+                    <Icon name="map-pin" className="text-xs" />
+                    {it.place}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ---------- Contact ----------
+    function Contact() {
+      return (
+        <section id="contact" className="relative py-28">
+          <div className="mx-auto max-w-5xl px-5">
+            <div className="reveal relative overflow-hidden rounded-[2.5rem] glass-strong gradient-border p-10 sm:p-16 text-center">
+              <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-72 w-[36rem] rounded-full bg-brand-violet/25 blur-3xl" />
+              <div className="absolute -bottom-32 right-0 h-72 w-72 rounded-full bg-brand-pink/25 blur-3xl" />
+              <Sparkle
+                size={28}
+                hue="violet"
+                className="twinkle"
+                style={{ top: "8%", left: "8%" }}
+              />
+              <Sparkle
+                size={20}
+                hue="pink"
+                className="twinkle-2"
+                style={{ top: "14%", right: "12%" }}
+              />
+              <Sparkle
+                size={22}
+                hue="peach"
+                className="twinkle-3"
+                style={{ bottom: "10%", left: "10%" }}
+              />
+              <Sparkle
+                size={18}
+                hue="indigo"
+                className="twinkle"
+                style={{ bottom: "14%", right: "8%" }}
+              />
+              <div className="relative">
+                <SectionLabel index="06">
+                  <span className="mx-auto">Contact</span>
+                </SectionLabel>
+                <h2 className="mt-5 font-display text-4xl sm:text-6xl font-bold leading-tight text-ink-950">
+                  Have a project that needs{" "}
+                  <span className="gradient-text">care</span>?
                 </h2>
-              </div>
-              <div className="mt-10 grid md:grid-cols-3 gap-4">
-                {items.map((it, i) => (
-                  <div
-                    key={i}
-                    className="reveal glass rounded-2xl p-6 hover:bg-white/[0.06] transition-colors"
-                    style={{ transitionDelay: i * 80 + "ms" }}
-                  >
-                    <span className="text-xs font-mono text-ink-300">
-                      {it.period}
-                    </span>
-                    <h3 className="mt-2 font-display text-lg font-semibold text-white leading-tight">
-                      {it.school}
-                    </h3>
-                    <div className="mt-1 text-sm text-ink-200">
-                      {it.program}
-                    </div>
-                    <div className="mt-1 text-xs text-ink-300 inline-flex items-center gap-1.5">
-                      <Icon name="map-pin" className="text-xs" />
-                      {it.place}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      }
-
-      // ---------- Contact ----------
-      function Contact() {
-        return (
-          <section id="contact" className="relative py-28">
-            <div className="mx-auto max-w-5xl px-5">
-              <div className="reveal relative overflow-hidden rounded-[2.5rem] glass-strong gradient-border p-10 sm:p-16 text-center">
-                <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-72 w-[36rem] rounded-full bg-brand-violet/30 blur-3xl" />
-                <div className="absolute -bottom-32 right-0 h-72 w-72 rounded-full bg-brand-indigo/30 blur-3xl" />
-                <div className="relative">
-                  <SectionLabel index="06">
-                    <span className="mx-auto">Contact</span>
-                  </SectionLabel>
-                  <h2 className="mt-5 font-display text-4xl sm:text-6xl font-bold leading-tight">
-                    Have a project that needs{" "}
-                    <span className="gradient-text">care</span>?
-                  </h2>
-                  <p className="mt-5 max-w-xl mx-auto text-ink-200 text-lg">
-                    I'm taking on a small number of design + design-engineering
-                    engagements in 2026. Let's see if we're a fit.
-                  </p>
+                <p className="mt-5 max-w-xl mx-auto text-ink-700 text-lg">
+                  I'm taking on a small number of design engagements in 2026.
+                  Let's see if we're a fit.
+                </p>
+                <a
+                  href="mailto:selenemulmi1234@gmail.com"
+                  className="group mt-8 inline-flex items-center gap-3 rounded-full bg-ink-950 text-white px-7 py-4 text-base font-semibold hover:bg-ink-800 transition-all hover:-translate-y-0.5 pulse-glow"
+                >
+                  <Icon name="mail" className="text-lg" />
+                  selenemulmi1234@gmail.com
+                  <Icon
+                    name="arrow-up-right"
+                    className="text-lg nudge"
+                  />
+                </a>
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
                   <a
-                    href="mailto:selenemulmi1234@gmail.com"
-                    className="mt-8 inline-flex items-center gap-3 rounded-full bg-white text-ink-950 px-7 py-4 text-base font-semibold hover:bg-ink-100 transition-colors group"
+                    href="https://www.linkedin.com/in/selenemulmi"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full glass card-lift px-5 py-2.5 text-sm font-medium text-ink-950"
                   >
-                    <Icon name="mail" className="text-lg" />
-                    selenemulmi1234@gmail.com
-                    <Icon name="arrow-up-right" className="text-lg group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                    <Icon name="linkedin" className="text-base" />
+                    LinkedIn
                   </a>
-                  <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-                    <a
-                      href="https://www.linkedin.com/in/selenemulmi"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full glass px-5 py-2.5 text-sm font-medium text-ink-100 hover:bg-white/10 transition-colors"
-                    >
-                      <Icon name="linkedin" className="text-base" />
-                      LinkedIn
-                    </a>
-                    <a
-                      href="tel:+9779869840505"
-                      className="inline-flex items-center gap-2 rounded-full glass px-5 py-2.5 text-sm font-medium text-ink-100 hover:bg-white/10 transition-colors"
-                    >
-                      <Icon name="phone" className="text-base" />
-                      +977 9869840505
-                    </a>
-                    <span className="inline-flex items-center gap-2 rounded-full glass px-5 py-2.5 text-sm font-medium text-ink-100">
-                      <Icon name="map-pin" className="text-base" />
-                      Kupondole, Lalitpur
-                    </span>
-                  </div>
+                  <a
+                    href="tel:+9779869840505"
+                    className="inline-flex items-center gap-2 rounded-full glass card-lift px-5 py-2.5 text-sm font-medium text-ink-950"
+                  >
+                    <Icon name="phone" className="text-base" />
+                    +977 9869840505
+                  </a>
+                  <span className="inline-flex items-center gap-2 rounded-full glass px-5 py-2.5 text-sm font-medium text-ink-950">
+                    <Icon name="map-pin" className="text-base" />
+                    Kupondole, Lalitpur
+                  </span>
                 </div>
               </div>
             </div>
-          </section>
-        );
-      }
+          </div>
+        </section>
+      );
+    }
 
-      // ---------- Footer ----------
-      function Footer() {
-        return (
-          <footer className="relative border-t border-white/5 py-10">
-            <div className="mx-auto max-w-6xl px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-ink-300">
-              <div className="flex items-center gap-2">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-brand-indigo to-brand-violet text-xs font-bold text-white">
-                  SM
-                </span>
-                <span className="font-mono">© 2026 Selene Mulmi</span>
-              </div>
-              <div className="font-mono text-xs">
-                Designed & built with care · Kupondole → World
-              </div>
+    // ---------- Footer ----------
+    function Footer() {
+      return (
+        <footer className="relative border-t border-ink-950/5 py-10">
+          <div className="mx-auto max-w-6xl px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-ink-500">
+            <div className="flex items-center gap-2">
+              <span className="hover-wobble flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-brand-violet to-brand-pink text-xs font-bold text-white">
+                SM
+              </span>
+              <span className="font-mono">© 2026 Selene Mulmi</span>
             </div>
-          </footer>
-        );
-      }
+            <div className="font-mono text-xs flex items-center gap-2">
+              Designed with{" "}
+              <span className="text-brand-pink heart-pop inline-block">
+                ♥
+              </span>{" "}
+              · Kupondole → World
+            </div>
+          </div>
+        </footer>
+      );
+    }
 
-      // ---------- App ----------
-      function App() {
-        useReveal();
-        useEffect(() => {
-          if (window.lucide) window.lucide.createIcons();
-        }, []);
-        return (
-          <>
-            <BackgroundFX />
-            <Nav />
-            <main className="relative">
-              <Hero />
-              <Marquee />
-              <About />
-              <Experience />
-              <Skills />
-              <Projects />
-              <Education />
-              <Contact />
-            </main>
-            <Footer />
-          </>
-        );
-      }
+    // ---------- App ----------
+    function App() {
+      useReveal();
+      useEffect(() => {
+        if (window.lucide) window.lucide.createIcons();
+      }, []);
+      return (
+        <>
+          <BackgroundFX />
+          <CursorBlob />
+          <Nav />
+          <main className="relative">
+            <Hero />
+            <Marquee />
+            <About />
+            <Experience />
+            <Skills />
+            <Projects />
+            <Education />
+            <Contact />
+          </main>
+          <Footer />
+        </>
+      );
+    }
 
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(<App />);
-    </script>
-  </body>
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+
 </html>
